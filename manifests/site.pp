@@ -43,5 +43,5 @@ node default {
   # Example:
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
-  notify { "Github demo: success!": }
+  notify { "i just want this day to end": }
 }
