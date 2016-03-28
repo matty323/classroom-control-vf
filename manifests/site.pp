@@ -45,7 +45,7 @@ node default {
   notify { "Hello, my name is ${::hostname}": }
   notify { "Github demo: success!": }
   notify { "TRavis'd": }
-  exec { "cowsay 'Welcome to the jungle ${::fqdn}!' > /etc/motd/":
+  exec { "cowsay 'Welcome to the jungle ${::fqdn}!' > /etc/motd":
   creates => '/etc/motd',
   path=> '/usr/local/bin' }
 }
