@@ -45,11 +45,5 @@ node default {
   notify { "Hello, my name is ${::hostname}": }
   notify { "Github demo: success!": }
   notify { "TRavis'd": }
-  file { '/etc/motd':
-    ensure => file,
-    owner => 'root',
-    group => 'root',
-    mode => '0644',
-    content => 'Go Sens Go',
-    }
+  exec { "cowsay 'Welcome to the jungle ${::fqdn}!' > /etc/motd/" }
 }
