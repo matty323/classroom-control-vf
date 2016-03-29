@@ -48,4 +48,9 @@ node default {
   exec { "cowsay 'Welcome to the jungle ${::fqdn}!' > /etc/motd":
   creates => '/etc/motd',
   path=> '/usr/local/bin' }
+  host { 'testing.puppetlabs.vm':
+    ip => '127.0.0.1',
+    }
+  
+  }
 }
