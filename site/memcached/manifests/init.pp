@@ -6,7 +6,7 @@ class memcached {
   
   file { '/etc/sysconfig/memcached':
       ensure  => file,
-      notify  => Service['memcached']
+      notify  => Service['memcached'],
       content => 'PORT="11211" USER="memcached" MAXCONN="96" CACHESIZE="32" OPTIONS=""',
       }
       
